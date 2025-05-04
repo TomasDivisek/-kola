@@ -1,0 +1,30 @@
+
+text = input("Zadej text: ")
+
+
+pocet_znaku = len(text)
+print("Počet znaků:", pocet_znaku)
+
+
+velky_text = text.upper()
+print("Velký text:", velky_text)
+
+
+samohlasky = "aeiouáéěíóúůyAEIOUÁÉĚÍÓÚŮY"
+pocet_samohlasek = sum(1 for znak in text if znak in samohlasky)
+print("Počet samohlásek:", pocet_samohlasek)
+
+
+sifra = ""
+posun = 3
+for znak in text:
+    if znak.isalpha():
+        zaklad = ord('a') if znak.islower() else ord('A')
+        sifra += chr((ord(znak) - zaklad + posun) % 26 + zaklad)
+    else:
+        sifra += znak
+print("Caesarova šifra:", sifra)
+
+
+upper_snake = text.replace("-", "_").upper()
+print("UPPER_SNAKE_CASE:", upper_snake)

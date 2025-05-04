@@ -1,0 +1,13 @@
+a = 8
+b = 4
+
+
+soucet = a + b
+rozdil = a - b
+soucin = a * b
+pokud_deleni = "Nelze dělit nulou" if b == 0 else a / b
+
+print(f"{a} + {b} = {soucet}")
+print(f"{a} - {b} = {rozdil}")
+print(f"{a} * {b} = {soucin}")
+print(f"{a} / {b} = {pokud_deleni}")
